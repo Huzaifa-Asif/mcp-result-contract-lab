@@ -1,4 +1,15 @@
-# 0.1.0 release verification
+# Release verification
+
+## 0.1.1 maintenance
+
+Date: 2026-10-22 MYT
+
+- Replaced Node 20-based action majors with current Node 24-based releases.
+- Pinned all action references to verified full commit SHAs and retained minimum workflow permissions.
+- Disabled setup-node automatic package-manager caching because the zero-dependency build does not need it.
+- The full checks, exact-commit CI, exact-commit Pages deployment, signed tag, release archive, and live endpoint must be reverified independently before publication is claimed.
+
+## 0.1.0 verification
 
 Date: 2026-10-21 MYT
 

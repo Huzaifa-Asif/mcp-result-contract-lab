@@ -1,6 +1,6 @@
 {
   "name": "mcp-result-contract-lab",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Offline audits for captured MCP tool result contracts.",
   "type": "module",

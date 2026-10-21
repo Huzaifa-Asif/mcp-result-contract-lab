@@ -2,6 +2,16 @@
 
 Rechecked 2026-10-21 MYT.
 
+Workflow-maintenance sources rechecked 2026-10-22 MYT:
+
+- https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+- https://docs.github.com/en/actions/reference/security/secure-use
+- https://github.com/actions/checkout/releases/tag/v7.0.1
+- https://github.com/actions/setup-node/releases/tag/v7.1.0
+- https://github.com/actions/configure-pages/releases/tag/v6.0.0
+- https://github.com/actions/upload-pages-artifact/releases/tag/v5.0.0
+- https://github.com/actions/deploy-pages/releases/tag/v5.0.1
+
 ## Selected gap
 
 MCP tool definitions may declare an `outputSchema`, while successful calls return `structuredContent` plus model-readable `content`. OpenAI's current testing guidance asks developers to record request and response data and retest result shapes; the MCP specification requires structured results to match declared schemas. A saved-fixture audit gives teams a credential-free check before live inspection or CI server execution.
