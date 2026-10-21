@@ -1,0 +1,8 @@
+name: Feature request
+description: Propose a bounded contract check.
+body:
+  - type: textarea
+    attributes: { label: Contract gap, description: Cite the protocol or product requirement and explain the user impact. }
+    validations: { required: true }
+  - type: textarea
+    attributes: { label: Existing alternatives, description: Explain why current live inspectors or schema validators do not cover it. }

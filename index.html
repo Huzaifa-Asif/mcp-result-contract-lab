@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Audit captured MCP tool results against their declared output contract, locally.">
+  <title>MCP Result Contract Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#workspace">Skip to workspace</a>
+  <header><p class="eyebrow">Local-first MCP fixture audit</p><h1>Result contracts, without calling the server.</h1><p>Paste a saved tool definition and captured results. Check structured output, error semantics, secret-bearing fields, and instruction-like text entirely in this tab.</p></header>
+  <main id="workspace">
+    <section class="editor" aria-labelledby="fixture-heading">
+      <div class="section-head"><div><p class="step">01 / Input</p><h2 id="fixture-heading">Fixture bundle</h2></div><button id="sample" type="button">Load sample</button></div>
+      <label for="fixture">JSON bundle</label>
+      <textarea id="fixture" spellcheck="false" aria-describedby="input-help"></textarea>
+      <p id="input-help" class="help">Maximum 1 MiB and 50 cases. Data stays in memory; use placeholders, not live credentials.</p>
+      <div class="actions"><button id="audit" class="primary" type="button">Audit contract</button><button id="clear" type="button">Clear</button></div>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="results" aria-labelledby="results-heading">
+      <div class="section-head"><div><p class="step">02 / Evidence</p><h2 id="results-heading">Review report</h2></div><button id="download" type="button" disabled>Download JSON</button></div>
+      <div id="summary" class="summary"><p>Run an audit to see deterministic findings.</p></div>
+      <ol id="findings" class="findings"></ol>
+      <details><summary>Schema coverage and limitations</summary><div id="limitations"></div></details>
+    </section>
+  </main>
+  <footer><p>No network calls, accounts, telemetry, storage, or server execution. MIT licensed.</p></footer>
+  <script type="module" src="src/app.mjs"></script>
+</body>
+</html>

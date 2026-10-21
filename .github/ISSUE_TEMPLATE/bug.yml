@@ -1,0 +1,10 @@
+name: Bug report
+description: Report a reproducible contract-audit problem with synthetic data.
+body:
+  - type: textarea
+    attributes: { label: Problem, description: Describe expected and actual behavior. }
+    validations: { required: true }
+  - type: textarea
+    attributes: { label: Synthetic fixture, description: Remove credentials, personal data, and proprietary content. }
+  - type: input
+    attributes: { label: Environment, description: App version and Node/browser version. }

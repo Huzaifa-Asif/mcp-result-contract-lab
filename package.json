@@ -1,0 +1,18 @@
+{
+  "name": "mcp-result-contract-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline audits for captured MCP tool result contracts.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.mjs",
+    "lint": "node --check src/core.mjs && node --check src/app.mjs && node --check cli.mjs && node --check server.mjs",
+    "typecheck": "node --check src/core.mjs && node --check src/app.mjs && node --check cli.mjs && node --check server.mjs",
+    "test": "node --test",
+    "build": "node scripts/build.mjs",
+    "audit": "npm audit --omit=dev",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build && npm run audit"
+  },
+  "license": "MIT"
+}

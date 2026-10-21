@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mcp-result-contract-lab",
+  "version": "0.1.0",
+  "description": "Audit saved MCP tool result fixtures against their declared output contract without connecting to the server.",
+  "author": { "name": "Huzaifa Asif", "url": "https://github.com/Huzaifa-Asif" },
+  "homepage": "https://github.com/Huzaifa-Asif/mcp-result-contract-lab",
+  "repository": "https://github.com/Huzaifa-Asif/mcp-result-contract-lab",
+  "license": "MIT",
+  "keywords": ["mcp", "testing", "output-schema", "structured-content", "privacy"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "MCP Result Contract Lab",
+        "shortDescription": "Audit captured MCP result contracts locally",
+        "longDescription": "Review saved MCP tool results for declared output-schema conformance, structured-content presence, error semantics, secret-bearing fields, and instruction-like text without contacting the server.",
+        "developerName": "Huzaifa Asif",
+        "category": "Developer Tools",
+        "capabilities": ["Read"],
+        "websiteURL": "https://github.com/Huzaifa-Asif/mcp-result-contract-lab",
+        "privacyPolicyURL": "https://github.com/Huzaifa-Asif/mcp-result-contract-lab/blob/main/PRIVACY.md",
+        "defaultPrompt": ["Audit these saved MCP tool result fixtures.", "Explain the contract failures in this MCP result report."]
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "tool": {
+    "name": "lookup_order",
+    "outputSchema": {
+      "type": "object",
+      "required": ["orderId", "status"],
+      "properties": {
+        "orderId": { "type": "string" },
+        "status": { "enum": ["open", "shipped"] }
+      },
+      "additionalProperties": false
+    }
+  },
+  "cases": [
+    {
+      "name": "successful lookup",
+      "expect": "success",
+      "result": {
+        "content": [{ "type": "text", "text": "Order A-17 is shipped." }],
+        "structuredContent": { "orderId": "A-17", "status": "shipped" },
+        "isError": false
+      }
+    },
+    {
+      "name": "missing order",
+      "expect": "error",
+      "result": {
+        "content": [{ "type": "text", "text": "Order was not found." }],
+        "isError": true
+      }
+    }
+  ]
+}
