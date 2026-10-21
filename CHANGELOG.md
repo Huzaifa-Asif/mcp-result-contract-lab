@@ -5,6 +5,7 @@
 - Move GitHub-hosted workflow actions to their current Node 24 majors.
 - Pin every workflow action to its verified full release commit SHA.
 - Disable setup-node's automatic package-manager cache in CI and Pages builds.
+- Separate Pages artifact creation from deployment so the deploy job consumes a completed build artifact.
 
 ## 0.1.0 - 2026-10-21
 
